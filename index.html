@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudra Pratap — Developer & Designer</title>
+  <meta name="description" content="Personal portfolio of Rudra Pratap — Full Stack Developer, Problem Solver, Tech Enthusiast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LOADING</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Wait for a second...</span>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- BACKGROUND -->
+  <div class="bg-scene">
+    <div class="bg-gradient"></div>
+    <canvas id="particleCanvas"></canvas>
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-orb orb3"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo"><RP></RP></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mob-link">About</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#projects" class="mob-link">Projects</a>
+      <a href="#journey" class="mob-link">Journey</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-badge reveal-up">Available for Work</div>
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">Rudra</span>
+        <span class="name-line accent-stroke">Pratap</span>
+      </h1>
+      <div class="hero-subtitle reveal-up">
+        <span id="typedText"></span><span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc reveal-up">
+        Crafting digital experiences that blend clean code<br />with thoughtful design — one pixel at a time.
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-scroll reveal-up">
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card floating">
+        <div class="hcard-dot green"></div>
+        <div class="hcard-line w80"></div>
+        <div class="hcard-line w60"></div>
+        <div class="hcard-code"><span class="c-purple">const</span> <span class="c-blue">dev</span> = {<br/>&nbsp;&nbsp;passion: <span class="c-green">"∞"</span>,<br/>&nbsp;&nbsp;coffee: <span class="c-orange">true</span><br/>}</div>
+      </div>
+      <div class="hero-card floating-alt">
+        <div class="hcard-stat">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Coding</div>
+        </div>
+        <div class="hcard-stat">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-container">
+      <div class="section-label reveal-left">01 — About</div>
+      <div class="about-grid">
+        <div class="about-image-col reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-img-bg"></div>
+            <div class="about-img-card glass-card">
+              <div class="about-avatar">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="60" fill="url(#avatarGrad)"/>
+                  <circle cx="60" cy="45" r="20" fill="rgba(255,255,255,0.3)"/>
+                  <ellipse cx="60" cy="95" rx="30" ry="20" fill="rgba(255,255,255,0.2)"/>
+                  <defs>
+                    <linearGradient id="avatarGrad" x1="0" y1="0" x2="120" y2="120">
+                      <stop offset="0%" stop-color="#6c63ff"/>
+                      <stop offset="100%" stop-color="#3ecfcf"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="about-name-tag">Rudra Pratap</div>
+              <div class="about-role-tag">Full Stack Developer</div>
+            </div>
+            <div class="about-float-badge float-1 glass-micro">
+              <span>🎓</span> B.Tech C.S
+            </div>
+            <div class="about-float-badge float-2 glass-micro">
+              <span>📍</span> Noida
+            </div>
+          </div>
+        </div>
+        <div class="about-content-col reveal-right">
+          <h2 class="section-title">Turning ideas into<br /><em>elegant code</em></h2>
+          <p class="about-text">
+            I'm a passionate full-stack developer with a deep love for building scalable systems and clean interfaces. From low-level C programming to modern web architectures — I thrive at every layer of the stack.
+          </p>
+          <p class="about-text">
+            When I'm not shipping features, you'll find me exploring networking protocols, contributing to open-source, or obsessing over UI micro-interactions.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Problem Solving</span>
+            <span class ="skill-tag">Cyber Security</span>
+            <span class="skill-tag">Open Source</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Networking</span>
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">Algorithms</span>
+          </div>
+          <div class="about-stats">
+            <div class="astat">
+              <div class="astat-num">3+</div>
+              <div class="astat-label">Years Experience</div>
+            </div>
+            <div class="astat">
+              <div class="astat-num">12+</div>
+              <div class="astat-label">Projects Built</div>
+            </div>
+            <div class="astat">
+              <div class="astat-num">5+</div>
+              <div class="astat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-label reveal-up">02 — Skills</div>
+      <h2 class="section-title centered reveal-up">My Toolkit</h2>
+      <p class="section-sub reveal-up">Technologies I work with day-to-day</p>
+      <div class="skills-grid">
+
+        <div class="skill-card glass-card reveal-up" data-delay="0">
+          <div class="skill-icon" style="--ic:#e8a94d">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.5L20 8.5v7L12 19.5 4 15.5v-7L12 4.5z"/></svg>
+          </div>
+          <div class="skill-name">C / C++</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"><div class="skill-fill" style="--clr:#e8a94d"></div></div></div>
+          <div class="skill-percent">88%</div>
+          <div class="skill-desc">Systems programming, memory management, DSA</div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-delay="100">
+          <div class="skill-icon" style="--ic:#e07b4a">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
+          </div>
+          <div class="skill-name">Java</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"><div class="skill-fill" style="--clr:#e07b4a"></div></div></div>
+          <div class="skill-percent">82%</div>
+          <div class="skill-desc">OOP, Spring Boot, backend services</div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-delay="200">
+          <div class="skill-icon" style="--ic:#61dafb">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.01 7.88c.18 0 .34.02.5.06.13.03.25.08.35.14.18.12.3.28.3.48 0 .5-.62 1.06-1.67 1.56-.18-.68-.42-1.4-.7-2.14.4-.07.8-.1 1.22-.1zm-3.01.44c.28.62.52 1.26.72 1.9-.76.28-1.6.44-2.47.44s-1.71-.16-2.47-.44c.2-.64.44-1.28.72-1.9.56-.06 1.14-.1 1.75-.1s1.19.04 1.75.1zM6.99 7.88c.42 0 .82.03 1.22.1-.28.74-.52 1.46-.7 2.14-1.05-.5-1.67-1.06-1.67-1.56 0-.2.12-.36.3-.48.1-.06.22-.11.35-.14.16-.04.32-.06.5-.06zM4 12c0-.28.38-.78 1.1-1.28.34-.24.76-.46 1.24-.66.12.48.28.98.48 1.48-.2.5-.36 1-.48 1.48-.48-.2-.9-.42-1.24-.66C4.38 12.78 4 12.28 4 12zm8 7.88c-.56 0-1.12-.08-1.65-.22.06-.26.12-.52.2-.78.44.06.9.1 1.45.1s1.01-.04 1.45-.1c.08.26.14.52.2.78-.53.14-1.09.22-1.65.22zm6-8.24c-.12-.48-.28-.98-.48-1.48.2-.5.36-1 .48-1.48.48.2.9.42 1.24.66.72.5 1.1 1 1.1 1.28s-.38.78-1.1 1.28c-.34.24-.76.46-1.24.66zM12 8.62c1.85 0 3.35 1.5 3.35 3.35S13.85 15.32 12 15.32s-3.35-1.5-3.35-3.35S10.15 8.62 12 8.62zm0 1.5c-1.02 0-1.85.83-1.85 1.85s.83 1.85 1.85 1.85 1.85-.83 1.85-1.85-.83-1.85-1.85-1.85z"/></svg>
+          </div>
+          <div class="skill-name">Web Development</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"><div class="skill-fill" style="--clr:#61dafb"></div></div></div>
+          <div class="skill-percent">90%</div>
+          <div class="skill-desc">HTML, CSS, JS, React, Node.js</div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-delay="300">
+          <div class="skill-icon" style="--ic:#3ecf8e">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <div class="skill-name">Networking</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"><div class="skill-fill" style="--clr:#3ecf8e"></div></div></div>
+          <div class="skill-percent">75%</div>
+          <div class="skill-desc">TCP/IP, DNS, HTTP/HTTPS, OSI model</div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-delay="400">
+          <div class="skill-icon" style="--ic:#a78bfa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <div class="skill-name">Data Structures</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"><div class="skill-fill" style="--clr:#a78bfa"></div></div></div>
+          <div class="skill-percent">85%</div>
+          <div class="skill-desc">Algorithms, complexity, problem solving</div>
+        </div>
+
+        <div class="skill-card glass-card reveal-up" data-delay="500">
+          <div class="skill-icon" style="--ic:#f472b6">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <div class="skill-name">Linux / Git</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"><div class="skill-fill" style="--clr:#f472b6"></div></div></div>
+          <div class="skill-percent">80%</div>
+          <div class="skill-desc">Shell scripting, version control, DevOps</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-label reveal-up">03 — Projects</div>
+      <h2 class="section-title centered reveal-up">Featured Work</h2>
+      <p class="section-sub reveal-up">Things I've built that I'm proud of</p>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card reveal-up" data-delay="0">
+          <div class="project-header">
+            <div class="project-icon">🌐</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Network Port Scanner</h3>
+          <p class="project-desc">A tool that scans a target IP address and detects open network ports. It helps understand how services communicate over networks.</p>
+          <div class="project-stack">
+            <span class="stack-tag">python socket</span>
+            <span class="stack-tag">Networking Concepts</span>
+            <span class="stack-tag">Loops & Exception handling</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal-up" data-delay="100">
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Log Analyzer Tool</h3>
+          <p class="project-desc">A program that reads and analyzes system or server log files to detect patterns such as errors or repeated failed login attempts.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python File Handling</span>
+            <span class="stack-tag">String Processing</span>
+            <span class="stack-tag">Pattern Detection Logic</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal-up" data-delay="200">
+          <div class="project-header">
+            <div class="project-icon">⚙️</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">File Organizer Script</h3>
+          <p class="project-desc">An automation script that organizes files in a folder by sorting them into categories like images, documents, videos, and more.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python OS module</span>
+            <!-- <span class="stack-tag">Node.js</span> -->
+            <span class="stack-tag">File System Automation</span>
+            <span class="stack-tag">Shutil Library</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal-up" data-delay="300">
+          <div class="project-header">
+            <div class="project-icon">📈</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Crypto Price Tracker</h3>
+          <p class="project-desc">A web application that fetches and displays real-time cryptocurrency prices such as Bitcoin and Ethereum using public APIs.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5 & CSS</span>
+            <span class="stack-tag">Javascript Fetch APIs</span>
+            <span class="stack-tag">CryptoCurrency Price APIs</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal-up" data-delay="400">
+          <div class="project-header">
+            <div class="project-icon">🤖</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Discord Bot Framework</h3>
+          <p class="project-desc">Modular Discord bot with slash commands, moderation tools, music playback, and a plugin architecture for easy feature extension.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Java</span>
+            <span class="stack-tag">JDA</span>
+            <span class="stack-tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal-up" data-delay="500">
+          <div class="project-header">
+            <div class="project-icon">🎮</div>
+            <div class="project-links">
+              <a href="#" class="proj-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">2D Game Engine</h3>
+          <p class="project-desc">Lightweight 2D game engine in C++ featuring entity-component system, collision detection, sprite rendering with SDL2, and a level editor.</p>
+          <div class="project-stack">
+            <span class="stack-tag">C++</span>
+            <span class="stack-tag">SDL2</span>
+            <span class="stack-tag">OpenGL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey">
+    <div class="section-container">
+      <div class="section-label reveal-up">04 — Journey</div>
+      <h2 class="section-title centered reveal-up">Learning Timeline</h2>
+      <div class="timeline">
+
+        <div class="tl-item reveal-left">
+          <div class="tl-dot"></div>
+          <div class="tl-content glass-card">
+            <div class="tl-year">2026 — Present</div>
+            <h3 class="tl-title">Full Stack & Systems</h3>
+            <p class="tl-text">Diving deep into full-stack architectures, distributed systems, and cloud deployments. Contributing to open-source projects.</p>
+            <div class="tl-tags"><span>React</span><span>Node</span><span>Docker</span><span>AWS</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item right reveal-right">
+          <div class="tl-dot"></div>
+          <div class="tl-content glass-card">
+            <div class="tl-year">2025</div>
+            <h3 class="tl-title">Systems & Networking</h3>
+            <p class="tl-text">Built low-level networking projects, implemented protocols from scratch, and explored OS concepts with memory management.</p>
+            <div class="tl-tags"><span>C</span><span>Sockets</span><span>Linux</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal-left">
+          <div class="tl-dot"></div>
+          <div class="tl-content glass-card">
+            <div class="tl-year">2024</div>
+            <h3 class="tl-title">Web Development</h3>
+            <p class="tl-text">Mastered frontend development, built interactive UIs, and started exploring backend with Node.js and Express.</p>
+            <div class="tl-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Node.js</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item right reveal-right">
+          <div class="tl-dot"></div>
+          <div class="tl-content glass-card">
+            <div class="tl-year">2023</div>
+            <h3 class="tl-title">Programming Foundations</h3>
+            <p class="tl-text">Started the journey with Python, C & C++, learned data structures, algorithms, and fell in love with problem solving.</p>
+            <div class="tl-tags"><span>C++</span><span>Java</span><span>DSA</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-label reveal-up">05 — Contact</div>
+      <h2 class="section-title centered reveal-up">Let's Connect</h2>
+      <p class="section-sub reveal-up">I'm always open to new opportunities and conversations</p>
+      <div class="contact-grid">
+
+        <div class="contact-card glass-card reveal-up" data-delay="0">
+          <div class="contact-icon email-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">rudrapratap3076@gmail.com</div>
+          <button class="copy-btn" data-copy="rudrapratap3076@gmail.com```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="contact-card glass-card reveal-up" data-delay="100">
+          <div class="contact-icon github-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">@rudra-codess</div>
+          <a href="https://github.com/rudra-codess" target="_blank" class="copy-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            <span>Visit</span>
+          </a>
+        </div>
+
+        <div class="contact-card glass-card reveal-up" data-delay="200">
+          <div class="contact-icon linkedin-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">Rudra Pratap</div>
+          <a href="https://www.linkedin.com/in/rudra-pratap-0711ba340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="copy-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            <span>Visit</span>
+          </a>
+        </div>
+
+        <div class="contact-card glass-card reveal-up" data-delay="300">
+          <div class="contact-icon location-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Noida, UTTARPRADESH</div>
+          <button class="copy-btn" data-copy="San Francisco, CA">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">RP</div>
+      <p class="footer-text">Built with passion & precision · 2026</p>
+      <div class="footer-social">
+        <a href="https://github.com/rudra-codess" target="_blank" class="social-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rudra-pratap-0711ba340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:rudrapratap3076@gmail.com" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 Rudra Pratap. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
