@@ -25,33 +25,6 @@ This template is perfect for **lazy coders** who just want to plug in their info
 
 ---
 
-## ⚙️ How to Use
-
-Clone the repository
-
-```
-git clone https://github.com/rudra-codess/your-repo-name.git
-```
-
-Go to project folder
-
-```
-cd your-repo-name
-```
-
-Install dependencies
-
-```
-npm install
-```
-
-Run development server
-
-```
-npm run dev
-```
-
----
 
 ## 🛠 Customization
 
